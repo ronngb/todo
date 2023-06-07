@@ -1,9 +1,15 @@
-<template></template>
+<template>
+  <JournalEntry />
+  <JournalWeek />
+</template>
 
 <script>
+import JournalEntry from './components/JournalEntry.vue'
+import JournalWeek from './components/JournalWeek.vue'
+
 export default {
   name: 'App',
-  components: {},
+  components: { JournalEntry, JournalWeek },
 }
 </script>
 
@@ -12,8 +18,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #6e6e6e;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  // display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
