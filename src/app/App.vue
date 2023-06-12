@@ -1,25 +1,22 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png" />
+  <section class="container mx-auto flex flex-col bg-slate-500 justify-center h-screen">
+    <JournalWeek />
+    <JournalEntry />
+  </section>
 </template>
 
 <script>
+import JournalEntry from './components/JournalEntry.vue'
+import JournalWeek from './components/JournalWeek.vue'
+
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-  },
+  components: { JournalEntry, JournalWeek },
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.border-solid {
+  border: 1px solid #000;
 }
 </style>
