@@ -1,6 +1,8 @@
 <template>
-  <JournalEntry />
-  <JournalWeek />
+  <section class="container mx-auto flex flex-col bg-slate-500 justify-center h-screen">
+    <JournalWeek />
+    <JournalEntry />
+  </section>
 </template>
 
 <script>
@@ -14,15 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #6e6e6e;
-  text-align: center;
-  // display: flex;
-  // flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.border-solid {
+  border: 1px solid #000;
 }
 </style>

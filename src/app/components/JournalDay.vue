@@ -1,8 +1,13 @@
 <template>
-  <div class="day column" @click="setActiveDay(day.id)">
-    <div class="day-banner has-text-white has-text-centered">{{ day.abbvTitle }}</div>
-    <div class="day-details">
-      <div class="day-number">{{ day.id }}</div>
+  <div
+    class="flex-[0_1_320px] bg-zinc-700 hover:bg-gray-700 text-white text-base cursor-pointer rounded-md"
+    @click="setActiveDay(day.id)">
+    <div
+      class="uppercase tracking-wider font-semibold text-xs text-white p-2 bg-neutral-800 text-center">
+      {{ day.fullTitle }}
+    </div>
+    <div class="p-3">
+      <div class="text-center">{{ day.id }}</div>
       <JournalEvent
         v-for="event in day.events"
         :key="day.events.indexOf(event)"
@@ -29,37 +34,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.day {
-  background-color: #4a4a4a;
-  color: #fff;
-  border-left: 1px solid #8f8f8f;
-  border-bottom: 1px solid #8f8f8f;
-  font-size: 12px;
-  cursor: pointer;
-  flex: 1 1 0;
-
-  &:hover {
-    background: darken(#4a4a4a, 3%);
-  }
-
-  .day-banner {
-    background-color: #333333;
-    color: #fff;
-    padding: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  .day-details {
-    padding: 10px;
-  }
-
-  &:last-child {
-    border-right: 1px solid #8f8f8f;
-  }
-}
-</style>

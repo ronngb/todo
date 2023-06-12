@@ -1,14 +1,12 @@
 <template>
-  <div id="journal-week" class="container">
-    <div class="columns is-mobile">
-      <!-- <CalendarDay v-for="day in sharedState.seedData" :key="day.id" :day="day" /> -->
-    </div>
+  <div class="flex gap-1 mb-12 px-5">
+    <JournalDay v-for="day in sharedState.seedData" :key="day.id" :day="day" />
   </div>
 </template>
 
 <script>
 import { store } from '../store.js'
-// import CalendarDay from './CalendarDay.vue';
+import JournalDay from './JournalDay.vue'
 
 export default {
   name: 'JournalWeek',
@@ -17,15 +15,8 @@ export default {
       sharedState: store.state,
     }
   },
-  components: {},
+  components: { JournalDay },
 }
 </script>
 
-<style lang="scss" scoped>
-#journal-week {
-  margin-bottom: 50px;
-  .column {
-    padding: 0 0 0 0;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
